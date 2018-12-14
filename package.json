@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://jonathanmng.github.io/ravenous",
   "dependencies": {
+    "babel-loader": "^8.0.4",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1",
