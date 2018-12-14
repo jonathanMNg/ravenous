@@ -10,8 +10,8 @@ class SearchBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      term: 'Pho One',
-      location: 'Honolulu, Hawaii',
+      term: '',
+      location: '',
       sortBy: 'best_match'
     };
     this.handleTermChange = this.handleTermChange.bind(this);

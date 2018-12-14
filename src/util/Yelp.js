@@ -6,7 +6,6 @@ const Yelp = {
 
   },
   search(term, location, sortBy) {
-    console.log(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}`);
     return fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}`, {
       headers: {
         Authorization: `Bearer ${apiKey}`
@@ -34,7 +33,11 @@ const Yelp = {
             });
           }
           else {
-            return {message: "Error, no results are found"};
+            return [{
+              id: null,
+              imageSrc: 'https://s3-media1.fl.yelpcdn.com/bphoto/wZIXKYNKkXpeDZZ1a30Rxw/ls.jpg',
+              name: 'There is no result :('
+            }];
           }
         });
   }
